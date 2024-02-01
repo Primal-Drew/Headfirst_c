@@ -11,7 +11,7 @@ int main(){
     {
         case 37 :
         winning += 80;
-        printf("Jackpot!");
+        printf("Jackpot!\n");
         break;
 
         case 65:

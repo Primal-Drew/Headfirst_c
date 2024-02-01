@@ -6,11 +6,14 @@
 int main()
 {
     char card_name[3];
+    int counter = 0;
+    while(card_name[0] != 'X'){
     printf("Enter the name of the card:");
     scanf("%2s",card_name);
     
     int val =0;
 
+    
     switch(card_name[0]){
         case 'K':
         case 'Q':
@@ -20,15 +23,24 @@ int main()
         case 'A':
         val =11;
         break;
+        case 'X':
+        printf("\nDone counting\n");
+        break;
         default:
         val = atoi(card_name);
         break;
         
     }
 
+    if (val>11){
+        printf("\nError!");
+        continue;
+    }
+
+
     printf("\nValue:%d\n",val);
 
-    int count = 0;
+    static int count = 0;
 
     if(val==3||val==4||val==5||val==6){
         count++;
@@ -39,7 +51,8 @@ int main()
     
     printf("Count:%d\n",count);
 
-    
+    }
+
     return 0;
 
 }

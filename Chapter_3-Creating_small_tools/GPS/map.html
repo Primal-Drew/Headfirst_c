@@ -14,16 +14,47 @@
         height: 100%;
       }
     </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   </head>
   <body>
+    <div id="map" style="height: 100%;"></div>
 
-    <iframe
-      width="100%"
-      height="100%"
-      frameborder="0"
-      style="border:0"
-      src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=latitude,longitude">
-    </iframe>
+    <script src="output.json" type="text/javascript"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script type="text/javascript">
+      var map = L.map('map').setView([0, 0], 14);
 
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      var c_lat = 0;
+      var c_lon = 0;
+      for (var i = 0; i < data.length; i++) {
+        c_lat += data[i].latitude;
+        c_lon += data[i].longitude;
+      }
+      if (data.length > 0) {
+        c_lat /= data.length;
+        c_lon /= data.length;
+      }
+
+      for (var i = 0; i < data.length; i++) {
+        var lat = data[i].latitude;
+        if (lat < -90 || lat > 90) {
+          alert("Invalid latitude: '" + lat + "'");
+          continue;
+        }
+        var lng = data[i].longitude;
+        if (lng < -180 || lng > 180) {
+          alert("Invalid longitude: '" + lng + "'");
+          continue;
+        }
+        var marker = L.marker([lat, lng]).addTo(map);
+        marker.bindPopup(data[i].info);
+      }
+
+      map.setView([c_lat, c_lon], 14);
+    </script>
   </body>
 </html>

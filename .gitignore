@@ -50,3 +50,13 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Other files
+messages1.txt
+messages2.txt
+
+disappearances.csv
+gpscopy.csv
+others.csv
+spooky.csv
+UFO.csv

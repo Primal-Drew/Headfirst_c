@@ -9,3 +9,6 @@ acquarium.out: acquarium.c
 
 scuba.out: scuba.c
 	gcc scuba.c -o scuba.out && ./scuba.out
+
+turtle.out: turtle.c
+	gcc turtle.c -o turtle.out && ./turtle.out 

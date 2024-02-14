@@ -15,4 +15,9 @@ turtle.out: turtle.c
 
 safe.out: safe_cracker.c
 	gcc safe_cracker.c -o safe.out && ./safe.out
-	
+
+unions.out: unions.c 
+	gcc unions.c -o unions.out && ./unions.out
+
+code_magnets.out: code_magnets.c 
+	gcc code_magnets.c -o code_magnets.out && ./code_magnets.out

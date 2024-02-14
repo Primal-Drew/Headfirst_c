@@ -12,3 +12,7 @@ scuba.out: scuba.c
 
 turtle.out: turtle.c
 	gcc turtle.c -o turtle.out && ./turtle.out 
+
+safe.out: safe_cracker.c
+	gcc safe_cracker.c -o safe.out && ./safe.out
+	

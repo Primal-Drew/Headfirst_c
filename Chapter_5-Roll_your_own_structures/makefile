@@ -21,3 +21,6 @@ unions.out: unions.c
 
 code_magnets.out: code_magnets.c 
 	gcc code_magnets.c -o code_magnets.out && ./code_magnets.out
+
+play.out: Play.c 
+	gcc Play.c -o play.out && ./play.out

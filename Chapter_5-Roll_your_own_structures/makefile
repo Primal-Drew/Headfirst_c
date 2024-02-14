@@ -3,3 +3,9 @@ fish.out: fish.c
 
 chained.out: chained_structs.c
 	gcc chained_structs.c -o chained.out && ./chained.out
+
+acquarium.out: acquarium.c
+	gcc acquarium.c -o acquarium.out && ./acquarium.out
+
+scuba.out: scuba.c
+	gcc scuba.c -o scuba.out && ./scuba.out

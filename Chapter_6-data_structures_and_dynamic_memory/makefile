@@ -3,3 +3,7 @@ tour.out: tour.c
 
 play.out: play.c
 	gcc play.c -o play.out && ./play.out
+
+flight.out: flight_operators.c
+	gcc flight_operators.c -o flight.out && ./flight.out < islands.txt
+

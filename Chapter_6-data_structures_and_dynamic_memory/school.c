@@ -1,7 +1,10 @@
+/*Note this program is not in the book but applies the concept in the chapter in another area*/
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
+/*Come back after learnig how to do randomize classes*/
+/* The program should also write to a file for the school to keep records*/
 typedef struct school{
     char *name;
     int *adm;
@@ -22,9 +25,8 @@ void display(school *start){
     for(;i->next !=NULL;i=next){
         printf("Name:%s\n",i->name);
         next = i->next;
-    }
-    
-}
+    } 
+};
 
 void freedom(school *start){
     school *i =start;

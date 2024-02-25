@@ -1,8 +1,8 @@
 tour.out: tour.c
 	gcc tour.c -o tour.out && ./tour.out
 
-play.out: play.c
-	gcc -g play.c -o play.out && valgrind --leak-check=full ./play.out < islands.txt
+school.out: school.c
+	gcc -g school.c -o school.out && valgrind --leak-check=full ./school.out < students.txt
 
 flight.out: flight_operators.c
 	gcc flight_operators.c -o flight.out && ./flight.out < islands.txt

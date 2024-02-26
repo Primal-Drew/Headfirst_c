@@ -1,6 +1,6 @@
 # DATA STRUCTURES AND DYNAMIC MEMORY
 ## Description
-    In this chapter,you'll see how to create:
+    In this chapter,learn see how to create:
      1. Struct pointers
      2. linked lists
      3. dynamically allocating memory on the heap

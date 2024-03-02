@@ -10,3 +10,6 @@ mysort.out: mysort.c
 	gcc mysort.c -o mysort.out && ./mysort.out
 	rm mysort.out
 
+messages.out: send_dear_johns.c
+	gcc send_dear_johns.c -o messages.out && ./messages.out
+	rm messages.out

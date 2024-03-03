@@ -33,34 +33,25 @@ void marriage()
     puts("us with a proposal of marriage.");
 };
 
-void sms(response* user)
+void sms(response *user)
 {
     printf("Dear %s,\n", user->name);
-
-    void (*types)(void);
-
-    if(user->type == DUMP)
-    {
-        types = dump;
-        types();
-    }
-
-    if(user->type==SECOND_CHANCE)
-    {
-        types = second_chance;
-        types();
-    }
-    
-    if(user->type == MARRIAGE)
-    {
-        types = marriage;
-        types();
-    }
+    void (*replies[])(void) = {
+        dump,
+        second_chance,
+        marriage,
+    };
+    (*replies[user->type])();
 }
 
 int main()
 {
-    response user1 = {"Frida",MARRIAGE};
+    response r[] = {
+        {"Mike", DUMP}, {"Luis", SECOND_CHANCE}, {"Matt", SECOND_CHANCE}, {"William", MARRIAGE}};
 
-    sms(&user1);
+    int no_r = 4;
+    for (int i = 0; i < no_r; i++)
+    {
+        sms(&r[i]);
+    };
 }

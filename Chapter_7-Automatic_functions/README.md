@@ -1,11 +1,18 @@
 # CHAPTER 7: ADVANCED FUNCTIONS
 ## Description
-
-    TO-DO
+This chapter covers how to pass functions as parameters. It also covers how to get things sorted with comparator functions. And finally, how to make variadic functions.
 
 ## Resources
-    TO-DO
-    
+    HeadfirstC
+
+    GCC
+
+    Makefile
+
 ## Build
-    TO-DO
+    For compilation am using GCC
+    
+    Check out the makefile I have uploaded to see how I compiled my programs
+
+
 

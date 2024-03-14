@@ -4,6 +4,9 @@ checksum.o: checksum.c checksum.h
 encrypt.o: encrypt.c encrypt.h
 	gcc -c encrypt.c
 
-test.o: test_code.c encrypt.o checksum.o
-	gcc -c test_code.c
+libhfsecurity.a:checksum.o encrypt.o
+	ar -rcs libhfsecurity.a encrypt.o checksum.o
+
+test_code: test_code.c libhfsecurity.a
+	gcc test_code.c -I. -L. -lhfsecurity
 

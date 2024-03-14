@@ -1,9 +1,9 @@
-checksum.o: checksum.c 
-	gcc -c checksum.c -o checksum.o
+checksum.o: checksum.c checksum.h
+	gcc -c checksum.c 
 
-encrypt.o: encrypt.c
-	gcc -c encrypt.c -o encrypt.o
+encrypt.o: encrypt.c encrypt.h
+	gcc -c encrypt.c
 
-test.out: test_code.c
-	gcc test_code.c encrypt.o checksum.o -o test.out
+test.o: test_code.c encrypt.o checksum.o
+	gcc -c test_code.c
 

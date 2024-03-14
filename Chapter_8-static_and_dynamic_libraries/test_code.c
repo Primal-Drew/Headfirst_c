@@ -4,7 +4,7 @@
 
 int main()
 {
-    char message[] = "Andrew aren't you coming home";
+    char message[] = "Speak friend and enter";
     encrypt(message);
 
     printf("Encrypted:%s\n",message);
